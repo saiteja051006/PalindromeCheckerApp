@@ -1,20 +1,22 @@
 
-    public class uc5 {
-     import java.util.Stack;
 
-
+        public class uc6 {
             public static void main(String[] args) {
-                String input = "RADAR";
+                String input = "MADAM";
 
                 Stack<Character> stack = new Stack<>();
+                Queue<Character> queue = new LinkedList<>();
+
                 boolean isPalindrome = true;
 
                 for (int i = 0; i < input.length(); i++) {
-                    stack.push(input.charAt(i));
+                    char ch = input.charAt(i);
+                    stack.push(ch);
+                    queue.add(ch);
                 }
 
-                for (int i = 0; i < input.length(); i++) {
-                    if (input.charAt(i) != stack.pop()) {
+                while (!stack.isEmpty()) {
+                    if (!stack.pop().equals(queue.remove())) {
                         isPalindrome = false;
                         break;
                     }
