@@ -1,4 +1,4 @@
-public class UC2PalindromeCheckerApp {
+public class uc3 {
     public static void main(String[] args) {
 
         String input = "SAI TEJA";
